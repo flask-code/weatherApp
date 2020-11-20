@@ -37,8 +37,8 @@ body {
     width: 100%;
     font-size: 30px;   
 
-    background: rgb(12,255,0);
-    background: linear-gradient(90deg, rgba(12,255,0,1) 9%, rgba(86,149,35,1) 100%);
+    background: rgb(0,132,255);
+    background: linear-gradient(90deg, rgba(0,132,255,1) 9%, rgba(0,255,253,1) 100%);
 }
 
 #show:hover {
