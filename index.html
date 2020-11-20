@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <title>Погода</title>
+        <script src="eel.js"></script>
+        <link rel="icon" type="image/png" href="/favicon.png">
+    </head>
+    <body>
+
+    <input id="location" type="text" placeholder="Введите название страны и города..." required="">
+
+    <button id="show">Узнать погоду</button>
+
+    <div id="info"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+        async function display_weather() {
+            let place = document.getElementById('location').value;
+
+            let res = await eel.get_weather(place)();
+            document.getElementById('info').innerHTML = res;
+        }
+
+        jQuery('#show').on('click', function() {
+            display_weather();
+        });
+
+    </script>
+    </body>
+</html>
